@@ -26,7 +26,7 @@ include_once __DIR__ . '/classes/producer.php';
 
         <?php  //istanza prodotto
 
-            $producer = new Producer('Avvitatore', 'Avvitatore Brushless con percussione', '50')
+            $producer = new Producer('Avvitatore', 'Avvitatore Brushless con percussione', '50', 'Makita')
 
          ?>
 
@@ -34,6 +34,8 @@ include_once __DIR__ . '/classes/producer.php';
          <?php 
          echo $producer->printProduct();
          ?>
+
+         <h3>Produttore: <?php echo $producer->printProducer(); ?></h3>
     </section>
 
     <section>
