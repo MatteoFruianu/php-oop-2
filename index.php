@@ -4,7 +4,8 @@
 Sfruttate questa occasione per giocare anche con le keyword di accesso (public, protected, private) -->
 
 <?php 
-include_once __DIR__ . '/classes/producer.php';
+include_once __DIR__ . '/classes/Producer.php';
+include_once __DIR__ . '/classes/Category.php';
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +37,26 @@ include_once __DIR__ . '/classes/producer.php';
          ?>
 
          <h3>Produttore: <?php echo $producer->printProducer(); ?></h3>
+
+        
     </section>
 
     <section>
-        <h2>Section 2</h2>
-    </section>
+            <?php //istanza categoria
+                $category = new Category('Sega Legno', 'Sega giapponese lama flessibile', '38');
+                $category->setCategory('Falegnameria faidate');
+                
+            ?>
+
+        <h2>Section 2 - Categoria</h2>
+            Prodotto: <br>
+            <?php echo $category->printProduct(); ?> 
+                <br> Categoria:
+            <?php echo $category->getCategory();  ?>
+        
+        </section>
+
+    
 </main>
 
     
